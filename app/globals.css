@@ -2,30 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-/* customSlider.css */
 .ant-slider-handle {
-  opacity: 0; /* Hide the default thumb */
+  opacity: 0;
 }
 
 .custom-slider-handle {
-  /* Styles for your custom visual representation */
   position: absolute;
   top: 50%;
   left: calc(var(--slider-handle-position) * 100%);
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
-  background-color: #4db949; /* Match track color */
+  background-color: #4db949;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .ant-slider:hover .custom-slider-handle {
-  opacity: 1; /* Show custom handle on hover */
+  opacity: 1;
 }
 
 .custom-slider-wrapper {
-  /* Optional styles for the wrapper element */
   position: relative;
 }
 
