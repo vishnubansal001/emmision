@@ -383,7 +383,6 @@ var ptions = {
     yaxis: [
       {
         y: 30,
-        // borderColor: "#999",
       },
     ],
   },
@@ -402,10 +401,7 @@ var ptions = {
   fill: {
     type: "gradient",
     gradient: {
-      shadeIntensity: 1,
-      opacityFrom: 0.7,
-      opacityTo: 0.9,
-      stops: [0, 100],
+      shadeIntensity: 0,
     },
   },
 };
@@ -500,9 +496,9 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div className="text-white flex flex-col gap-5 w-full">
-        <div className="flex md:flex-row flex-col gap-6 w-full justify-center items-start ">
-          <div className="bg-[#010101] px-10 py-7 text-white border-2 border-[#777777] rounded-[14px] flex flex-col gap-6 lg:w-[50%] w-[90%]">
+      <div className="text-white grid md:grid-cols-2 grid-cols-1 gap-5 w-full justify-start items-start">
+        <div className="flex flex-col gap-6 w-full justify-center items-start ">
+          <div className="bg-[#010101] px-10 py-7 text-white border-2 border-[#777777] rounded-[14px] flex flex-col gap-6">
             <div className="flex sm:flex-row flex-col gap-20 justify-between items-center w-full">
               <div className="flex flex-col justify-start items-start">
                 <h1 className="lg:text-lg text-base">Emission by Port</h1>
@@ -549,45 +545,9 @@ const Page = () => {
             </div>
           </div>
           <div
-          style={{ backgroundImage: `url(/abc.png)` }}
-          className="lg:w-[50%] w-[90%] px-5 border-[#777777] rounded-md ">
-            <div>
-              <div>
-                <p className="text-3xl py-3">Ships</p>
-                <div className="flex">
-                  <div className="flex-grow-1">
-                    <p className="text-5xl text-[#68EDFF]">3,440</p>
-                    <div className="flex items-center">
-                      <p>Total Number of Ships</p>
-                      <img src="/click.svg" alt="click" />
-                    </div>
-                  </div>
-                  <div className="w-[50vw]">
-                    <ReactApexChart
-                      options={chartData.options}
-                      series={chartData.series}
-                      type="donut"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-              <p>Emission by Ship Type</p>
-            <div className="h-30px flex flex-row">
-              <div className="w-[50px] text-[#68EDFF] select-none bg-[#68EDFF] h-30px overflow-hidden flex-1">
-                eksdjn
-              </div>
-              <div className="w-[30px] select-none text-[#4DB949] bg-[#4DB949] h-30px overflow-hidden flex-1">
-                kershdznx
-              </div>
-              <div className="w-[30px] select-none text-[#FF8393] bg-[#FF8393] h-30px overflow-hidden flex-1">
-                kershdznx
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex md:flex-row flex-col gap-6 w-full justify-center items-start">
-          <div className="lg:w-[50%] w-full">
+            style={{ backgroundImage: `url(/abc.png)` }}
+            className="bg-cover w-full bg-no-repeat bg-center px-10 py-7 text-white border-2 border-[#777777] rounded-[14px] flex flex-col justify-start gap-6"
+          >
             <div>
               <div>
                 <h1>Carbon Emission Analysis</h1>
@@ -600,9 +560,51 @@ const Page = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="flex flex-col gap-6 w-full justify-center items-start">
           <div
             style={{ backgroundImage: `url(/abc.png)` }}
-            className="bg-cover lg:w-[50%] w-full bg-no-repeat bg-center px-10 py-7 text-white border-2 border-[#777777] rounded-[14px] flex flex-col justify-start gap-6"
+            className="bg-cover w-full bg-no-repeat bg-center px-10 py-3 text-white border-2 border-[#777777] rounded-[14px] flex flex-col justify-start gap-6"
+          >
+            <div>
+              <div>
+                <p className="text-3xl py-3">Ships</p>
+                <div className="flex">
+                  <div className="flex-grow-1">
+                    <p className="text-5xl text-[#68EDFF]">3,440</p>
+                    <div className="flex items-center">
+                      <p>Total Number of Ships</p>
+                      <img src="/click.svg" alt="click" />
+                    </div>
+                  </div>
+                  <div className="w-[50vw] h-36">
+                    <ReactApexChart
+                      options={chartData.options}
+                      series={chartData.series}
+                      type="donut"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-2">
+              <p>Emission by Ship Type</p>
+              <div className="flex flex-row">
+                <div className="w-[50px] text-[#68EDFF] select-none bg-[#68EDFF] overflow-hidden flex-1">
+                  eksdjn
+                </div>
+                <div className="w-[30px] select-none text-[#4DB949] bg-[#4DB949] overflow-hidden flex-1">
+                  kershdznx
+                </div>
+                <div className="w-[30px] select-none text-[#FF8393] bg-[#FF8393] overflow-hidden flex-1">
+                  kershdznx
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            style={{ backgroundImage: `url(/abc.png)` }}
+            className="bg-cover w-full bg-no-repeat bg-center px-10 py-4 text-white border-2 border-[#777777] rounded-[14px] flex flex-col justify-start gap-5"
           >
             <div className="flex sm:flex-row justify-between items-center w-full">
               <div className="flex flex-col gap-1">
@@ -637,7 +639,7 @@ const Page = () => {
               <div className="bg-[#0A0D25] flex flex-col gap-3 px-4 justify-center items-center py-5">
                 <p className="lg:text-xl md:text-lg text-base">408,183</p>
                 <p className="text-[#A4A4A4] lg:text-base text-sm">
-                  kueajgfsbc
+                  kueajgf
                 </p>
               </div>
               <div className="w-full h-full flex flex-col gap-3">
