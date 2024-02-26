@@ -522,22 +522,27 @@ const Page = () => {
                 {a.map((d, index) => (
                   <div
                     key={index}
-                    className="flex flex-row gap-2 justify-around items-center w-full"
+                    className="flex flex-row gap-4 justify-around items-center w-full"
                   >
-                    <div>{d.name}</div>
-                    <div className="w-[50%] flex flex-col justify-center items-center">
+                    <div className="text-[#68EDFF]">{d.name}</div>
+                    <div className="w-[40%] flex flex-col justify-center items-center">
                       <MySlider value={d.value} />
                     </div>
+                    <div>{d.value}</div>
                   </div>
                 ))}
               </div>
               <div className="h-[100px] overflow-y-scroll w-[50%] scrollable-element pr-4 flex flex-col gap-2 ">
                 {b.map((d, index) => (
-                  <div key={index} className="flex flex-row gap-2 justify-around items-center w-full">
-                    <div>{d.name}</div>
-                    <div className="w-[50%] flex flex-col justify-center items-center">
+                  <div
+                    key={index}
+                    className="flex flex-row gap-4 justify-around items-center w-full"
+                  >
+                    <div className="text-[#68EDFF]">{d.name}</div>
+                    <div className="w-[40%] flex flex-col justify-center items-center">
                       <MySlider value={d.value} />
                     </div>
+                    <div>{d.value}</div>
                   </div>
                 ))}
               </div>
@@ -588,10 +593,48 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div></div>
+        <div>
+          <div>
+            <div>
+              <p>Carbon Emission</p>
+              <p>134,821</p>
+              <div>
+                <p>Total Carbon Emission</p>
+                <img src="/click.svg" alt="click" />
+              </div>
+            </div>
+            <div>
+              MTCO2e
+            </div>
+          </div>
+          <div>
+            <div>
+              <p>408,183</p>
+              <p>kueajgfsbc</p>
+            </div>
+            <div>
+              <p>408,183</p>
+              <p>kueajgfsbc</p>
+            </div>
+            <div>
+              <p>408,183</p>
+              <p>kueajgfsbc</p>
+            </div>
+            <div>
+              <p>408,183</p>
+              <p>kueajgfsbc</p>
+            </div>
+            <div>
+              <p>408,183</p>
+              <p>iauhrsjn dgvbcj</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
 export default Page;
+
+// https://www.figma.com/file/TEUEHChqaSGFsBY8w7vJFv/aaiajakm?type=design&node-id=19-2417&mode=design&t=9ClqpoXxOkaptvj5-0
