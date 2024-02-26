@@ -548,7 +548,9 @@ const Page = () => {
               </div>
             </div>
           </div>
-          <div className="lg:w-[50%] w-[90%] px-5 border-gray-400 rounded-md bg-gradient-to-b from-[#181847] from-10% to-[#000000] to-70%">
+          <div
+          style={{ backgroundImage: `url(/abc.png)` }}
+          className="lg:w-[50%] w-[90%] px-5 border-[#777777] rounded-md ">
             <div>
               <div>
                 <p className="text-3xl py-3">Ships</p>
