@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* customSlider.css */
+.ant-slider-handle {
+  opacity: 0; /* Hide the default thumb */
+}
+
+.custom-slider-handle {
+  /* Styles for your custom visual representation */
+  position: absolute;
+  top: 50%;
+  left: calc(var(--slider-handle-position) * 100%);
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #4db949; /* Match track color */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.ant-slider:hover .custom-slider-handle {
+  opacity: 1; /* Show custom handle on hover */
+}
+
+.custom-slider-wrapper {
+  /* Optional styles for the wrapper element */
+  position: relative;
+}
+
+:where(.css-dev-only-do-not-override-1k979oh).ant-slider.ant-slider-disabled .ant-slider-rail {
+    background-color: #292F44 !important;
+}
+
+.scrollable-element::-webkit-scrollbar {
+  width: 4.5px; 
+}
+
+.scrollable-element::-webkit-scrollbar-track {
+  background: #7d7d7d;
+  border-radius: 6px;
+}
+
+.scrollable-element::-webkit-scrollbar-thumb {
+  background: #41DFE2;
+  border-radius: 6px;
+}
