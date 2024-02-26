@@ -501,7 +501,7 @@ const Page = () => {
         </div>
       </div>
       <div className="text-white flex flex-col gap-5 w-full">
-        <div className="flex md:flex-row flex-col gap-6 w-full justify-center items-start">
+        <div className="flex md:flex-row flex-col gap-6 w-full justify-center items-start ">
           <div className="bg-[#010101] px-10 py-7 text-white border-2 border-[#777777] rounded-[14px] flex flex-col gap-6 lg:w-[50%] w-[90%]">
             <div className="flex sm:flex-row flex-col gap-20 justify-between items-center w-full">
               <div className="flex flex-col justify-start items-start">
@@ -548,32 +548,37 @@ const Page = () => {
               </div>
             </div>
           </div>
-          <div className="lg:w-[50%] w-[90%]">
+          <div className="lg:w-[50%] w-[90%] px-5 border-gray-400 rounded-md bg-gradient-to-b from-[#181847] from-10% to-[#000000] to-70%">
             <div>
               <div>
-                <p>Ships</p>
-                <p>3,440</p>
-                <div>
-                  <p>Total Number of Ships</p>
-                  <img src="/click.svg" alt="click" />
+                <p className="text-3xl py-3">Ships</p>
+                <div className="flex">
+                  <div className="flex-grow-1">
+                    <p className="text-5xl text-[#68EDFF]">3,440</p>
+                    <div className="flex items-center">
+                      <p>Total Number of Ships</p>
+                      <img src="/click.svg" alt="click" />
+                    </div>
+                  </div>
+                  <div className="w-[50vw]">
+                    <ReactApexChart
+                      options={chartData.options}
+                      series={chartData.series}
+                      type="donut"
+                    />
+                  </div>
                 </div>
               </div>
-              <div>
-                <ReactApexChart
-                  options={chartData.options}
-                  series={chartData.series}
-                  type="donut"
-                />
-              </div>
             </div>
-            <div className="w-[100px] h-30px flex flex-row">
-              <div className="w-[50px] text-[#68EDFF] select-none bg-[#68EDFF] h-30px overflow-hidden">
+              <p>Emission by Ship Type</p>
+            <div className="h-30px flex flex-row">
+              <div className="w-[50px] text-[#68EDFF] select-none bg-[#68EDFF] h-30px overflow-hidden flex-1">
                 eksdjn
               </div>
-              <div className="w-[30px] select-none text-[#4DB949] bg-[#4DB949] h-30px overflow-hidden">
+              <div className="w-[30px] select-none text-[#4DB949] bg-[#4DB949] h-30px overflow-hidden flex-1">
                 kershdznx
               </div>
-              <div className="w-[30px] select-none text-[#FF8393] bg-[#FF8393] h-30px overflow-hidden">
+              <div className="w-[30px] select-none text-[#FF8393] bg-[#FF8393] h-30px overflow-hidden flex-1">
                 kershdznx
               </div>
             </div>
@@ -603,9 +608,7 @@ const Page = () => {
                 <img src="/click.svg" alt="click" />
               </div>
             </div>
-            <div>
-              MTCO2e
-            </div>
+            <div>MTCO2e</div>
           </div>
           <div>
             <div>
