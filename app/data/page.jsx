@@ -584,52 +584,74 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div>
-          <div></div>
-          <div>
+        <div className="flex md:flex-row flex-col gap-6 w-full justify-center items-start">
+          <div className="lg:w-[50%] w-full">
             <div>
-              <h1>Carbon Emission Analysis</h1>
-              <ReactApexChart
-                options={ptions}
-                series={ptions.series}
-                type="area"
-                height={350}
-              />
-            </div>
-          </div>
-        </div>
-        <div>
-          <div>
-            <div>
-              <p>Carbon Emission</p>
-              <p>134,821</p>
               <div>
-                <p>Total Carbon Emission</p>
-                <img src="/click.svg" alt="click" />
+                <h1>Carbon Emission Analysis</h1>
+                <ReactApexChart
+                  options={ptions}
+                  series={ptions.series}
+                  type="area"
+                  height={350}
+                />
               </div>
             </div>
-            <div>MTCO2e</div>
           </div>
-          <div>
-            <div>
-              <p>408,183</p>
-              <p>kueajgfsbc</p>
+          <div
+            style={{ backgroundImage: `url(/abc.png)` }}
+            className="bg-cover lg:w-[50%] w-full bg-no-repeat bg-center px-10 py-7 text-white border-2 border-[#777777] rounded-[14px] flex flex-col justify-start gap-6"
+          >
+            <div className="flex sm:flex-row justify-between items-center w-full">
+              <div className="flex flex-col gap-1">
+                <p className="lg:text-lg">Carbon Emission</p>
+                <p className="lg:text-4xl md:text-2xl text-lg text-[#41DFE2]">
+                  134,821
+                </p>
+                <div className="flex flex-row gap-3 justify-center items-center">
+                  <p className="text-sm text-[#A4A4A4]">
+                    Total Carbon Emission
+                  </p>
+                  <img src="/click.svg" alt="click" className="w-[20px]" />
+                </div>
+              </div>
+              <div>MTCO2e</div>
             </div>
-            <div>
-              <p>408,183</p>
-              <p>kueajgfsbc</p>
-            </div>
-            <div>
-              <p>408,183</p>
-              <p>kueajgfsbc</p>
-            </div>
-            <div>
-              <p>408,183</p>
-              <p>kueajgfsbc</p>
-            </div>
-            <div>
-              <p>408,183</p>
-              <p>iauhrsjn dgvbcj</p>
+            <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-2">
+              <div className="w-full h-full flex flex-col gap-3">
+                <div className="bg-[#0A0D25] flex flex-col gap-3 px-4 justify-center items-center py-5">
+                  <p className="lg:text-xl md:text-lg text-base">408,183</p>
+                  <p className="text-[#A4A4A4] lg:text-base text-sm">
+                    kueajgfsbc
+                  </p>
+                </div>
+                <div className="bg-[#0A0D25] flex flex-col gap-3 px-4 justify-center items-center py-5">
+                  <p className="lg:text-xl md:text-lg text-base">408,183</p>
+                  <p className="text-[#A4A4A4] lg:text-base text-sm">
+                    kueajgfsbc
+                  </p>
+                </div>
+              </div>
+              <div className="bg-[#0A0D25] flex flex-col gap-3 px-4 justify-center items-center py-5">
+                <p className="lg:text-xl md:text-lg text-base">408,183</p>
+                <p className="text-[#A4A4A4] lg:text-base text-sm">
+                  kueajgfsbc
+                </p>
+              </div>
+              <div className="w-full h-full flex flex-col gap-3">
+                <div className="bg-[#0A0D25] flex flex-col gap-3 px-4 justify-center items-center py-5">
+                  <p className="lg:text-xl md:text-lg text-base">408,183</p>
+                  <p className="text-[#A4A4A4] lg:text-base text-sm">
+                    kueajgfsbc
+                  </p>
+                </div>
+                <div className="bg-[#0A0D25] flex flex-col gap-3 px-4 justify-center items-center py-5">
+                  <p className="lg:text-xl md:text-lg text-base">408,183</p>
+                  <p className="text-[#A4A4A4] lg:text-base text-sm">
+                    iauhrsjn dgvbcj
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -639,5 +661,3 @@ const Page = () => {
 };
 
 export default Page;
-
-// https://www.figma.com/file/TEUEHChqaSGFsBY8w7vJFv/aaiajakm?type=design&node-id=19-2417&mode=design&t=9ClqpoXxOkaptvj5-0
